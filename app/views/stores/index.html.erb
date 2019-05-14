@@ -1,0 +1,69 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="index-heading">
+        <h3 class="text-center">
+          World’s Premier Cannabis Marketplace
+        </h3>
+        <p class="text-center">Whether you are a vendor, delivery service, smoke shop, grower or anybody else in the booming Cannabis industry, NuggPlug gets millions of eyes on your brand.</p>
+      </div>
+      <h4>
+        Featured stores
+      </h4>
+        <div class="flexslider">
+        <ul class="slides">
+          <% @store.each do |p| %>
+            <li class="slide">
+              <%= link_to p.name, store_path(p) %>
+              <br>
+              <%= p.city %>, <%= p.state %>
+              <br>
+              <p>````</p>
+              <br>
+              <p>````</p>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <h3 class="text-center index-vendor">
+        Advertise your business on NuggPlug!
+      </h3>
+      <h4>
+        Favorited Stores
+      </h4>
+      <div class="flexslider">
+        <ul class="slides">
+          <% @store.each do |p| %>
+            <li class="slide">
+              <%= p.name %>
+              <br>
+              <%= p.city %>, <%= p.state %>
+              <br>
+              <p>````</p>
+              <br>
+              <p>````</p>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <h4>
+        Recently visited
+      </h4>
+      <div class="flexslider">
+        <ul class="slides">
+          <% @store.each do |p| %>
+            <li class="slide">
+              <%= p.name %>
+              <br>
+              <%= p.city %>, <%= p.state %>
+              <br>
+              <p>````</p>
+              <br>
+              <p>````</p>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
