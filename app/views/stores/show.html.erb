@@ -14,10 +14,10 @@
           </div>
           <div class="show-items">
             <p>
-              This is where the store items go
+              <%= render "stores/products" %>
             </p>
             <p>
-              <%= link_to "edit", new_product_path %>
+              <%= render "stores/new_product"%>
             </p>
           </div>
           <div class="show-reviews">
@@ -36,25 +36,22 @@
               </div>
             </div>
               <% end %>
-
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-12">
-                  <form role="form">
-                    <div class="form-group">
-                      <%= simple_form_for(Review.new, html: { class: 'form-inline' }) do |f| %>
+            <%= simple_form_for(Review.new, html: { class: 'form-inline' }) do |f| %>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+                    <form role="form">
+                      <div class="form-group">
                         <%= f.input :comment %>
                         <%= f.hidden_field :store_id, :value => @store.id %>
 
-                        <%= f.button :submit %>
-                      <% end %>
-                      <%= link_to "review", new_review_path %>
-                    </div>
-                  </form>
+                        <%= f.submit %>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
-            </div>
-
+            <% end %>
 
           </div>
         </div>
@@ -165,8 +162,6 @@
           <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
         </div>
       </div>
-
-
       </div>
     </div>
   </div>
