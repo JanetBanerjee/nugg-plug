@@ -5,6 +5,7 @@
 //general
 .body {
   margin-top: 75px;
+  background-color: #EFEFEF;
 }
 
 //nav-bar
@@ -12,8 +13,16 @@
   display: inline;
 }
 
+.navbar-default {
+  background-color: black;
+}
+
 .footer {
   background-color: lightgrey;
+}
+
+.footer-fixed {
+  position: fixed;
 }
 
 .navbar-header {
@@ -97,16 +106,29 @@
   border: solid;
 }
 
+.type-header {
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
 .index-heading {
   border: solid;
-  margin-top: 150px;
-  margin-bottom: 150px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: forestgreen;
 }
 
 .index-vendor {
   border: solid;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: forestgreen;
+}
+
+.questions {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: forestgreen;
 }
 
 //store.vendor
