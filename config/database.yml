@@ -80,6 +80,10 @@ test:
 #
 production:
   <<: *default
-  database: nugg-plug_production
-  username: nugg-plug
-  password: <%= ENV['NUGG-PLUG_DATABASE_PASSWORD'] %>
+  encoding: utf8
+  database: d74mke5ds7td87
+  username: qopgykagernxcl
+  password: bb96ec4fa2475340177d6b21300cbc767cd8f88f3c698171102e94b2af310ba3
+  host: ec2-75-101-147-226.compute-1.amazonaws.com
+  port: 5432
+
