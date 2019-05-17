@@ -1,0 +1,155 @@
+@import "flexslider";
+@import "bootstrap";
+@import "bourbon";
+
+//general
+.body {
+  margin-top: 75px;
+}
+
+//nav-bar
+.nav-button {
+  display: inline;
+}
+
+.footer {
+  background-color: lightgrey;
+}
+
+.navbar-header {
+  width: 100%;
+
+  button, .navbar-brand {
+    transition: opacity 0.15s;
+  }
+
+  button {
+    margin-right: 0;
+  }
+
+  button:hover, .navbar-brand:hover {
+    opacity: 0.8;
+  }
+}
+
+// store.new
+.form-hours {
+  margin-right: 30px;
+}
+
+// store.show
+.show-header {
+  margin-top: 50px;
+  height: 100px;
+  border: solid;
+}
+
+.show-desc {
+  height: 200px;
+  border: solid;
+}
+
+.show-items {
+  height: 200px;
+  border: solid;
+}
+
+.show-reviews {
+  border: solid;
+}
+
+.store-review {
+  margin-left: 50px;
+}
+
+.show-map {
+  border: solid;
+}
+
+.show-open {
+  border: solid;
+}
+
+.show-address {
+  border: solid;
+  text-align: center;
+}
+
+.show-hours {
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.store-hours {
+  margin-left: 50px;
+}
+
+.store-days {
+  margin-bottom: 16px;
+}
+
+.store-product {
+  margin-left: 50px;
+}
+
+// store.index
+.slide {
+  border: solid;
+}
+
+.index-heading {
+  border: solid;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.index-vendor {
+  border: solid;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+//store.vendor
+
+.vendor-pitch {
+  border: solid;
+}
+
+.vendor-adv {
+  border: solid;
+}
+ .vendor-heading {
+   border: solid;
+   margin-top: 15px;
+   margin-bottom: 15px;
+ }
+
+ //store.support
+
+.ul {
+  padding-left: 0px;
+  list-style: none;
+}
+
+.messages-list {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.message-sent {
+  position: relative;
+  background-color: #D9EDF7;
+  border-color: #BCE8F1;
+  margin: 5px 20px;
+  padding: 10px;
+  float: right;
+}
+
+.message-received {
+  background-color: #F1F0F0;
+  border-color: #EEEEEE;
+  margin: 5px 20px;
+  padding: 10px;
+  float: left;
+}
