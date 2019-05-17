@@ -1,0 +1,95 @@
+
+<div class="row">
+  <h4 class="text-center"><b>Store Hours</b></h4>
+  <div class="store-hours">
+
+    <div class="col-md-4">
+      <p class="store-days"><b>Monday</b></p>
+      <p class="store-days"><b>Tuesday</b></p>
+      <p class="store-days"><b>Wednesday</b></p>
+      <p class="store-days"><b>Thursday</b></p>
+      <p class="store-days"><b>Friday</b></p>
+      <p class="store-days"><b>Saturday</b></p>
+      <p class="store-days"><b>Sunday</b></p>
+    </div>
+    <div class="col-md-8">
+      <div class="show-hours">
+        <% if @store.mon_closed.nil? %>
+          <%= "Hours Unknown" %>
+        <% else %>
+          <% if @store.mon_closed == true %>
+            <%= "Closed" %>
+          <% else %>
+            <%= @store.mon_open.strftime("%I:%M %p")%> - <%= @store.mon_end.strftime("%I:%M %p") %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="show-hours">
+        <% if @store.tues_closed.nil? %>
+          <%= "Hours Unknown" %>
+        <% else %>
+          <% if @store.tues_closed == true %>
+            <%= "Closed" %>
+          <% else %>
+            <%= @store.tues_open.strftime("%I:%M %p")%> - <%= @store.tues_end.strftime("%I:%M %p") %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="show-hours">
+        <% if @store.wed_closed.nil? %>
+          <%= "Hours Unknown" %>
+        <% else %>
+          <% if @store.wed_closed == true %>
+            <%= "Closed" %>
+          <% else %>
+            <%= @store.wed_open.strftime("%I:%M %p")%> - <%= @store.wed_end.strftime("%I:%M %p") %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="show-hours">
+        <% if @store.wed_closed.nil? %>
+          <%= "Hours Unknown" %>
+        <% else %>
+          <% if @store.thurs_closed == true %>
+            <%= "Closed" %>
+          <% else %>
+            <%= @store.thurs_open.strftime("%I:%M %p")%> - <%= @store.thurs_end.strftime("%I:%M %p") %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="show-hours">
+        <% if @store.wed_closed.nil? %>
+          <%= "Hours Unknown" %>
+        <% else %>
+          <% if @store.fri_closed == true %>
+            <%= "Closed" %>
+          <% else %>
+            <%= @store.fri_open.strftime("%I:%M %p")%> - <%= @store.fri_end.strftime("%I:%M %p") %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="show-hours">
+        <% if @store.wed_closed.nil? %>
+          <%= "Hours Unknown" %>
+        <% else %>
+          <% if @store.sat_closed == true %>
+            <%= "Closed" %>
+          <% else %>
+            <%= @store.sat_open.strftime("%I:%M %p")%> - <%= @store.sat_end.strftime("%I:%M %p") %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="show-hours">
+        <% if @store.wed_closed.nil? %>
+          <%= "Hours Unknown" %>
+        <% else %>
+          <% if @store.sun_closed == true %>
+            <%= "Closed" %>
+          <% else %>
+            <%= @store.sun_open.strftime("%I:%M %p")%> - <%= @store.sun_end.strftime("%I:%M %p") %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

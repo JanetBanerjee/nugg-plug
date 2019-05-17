@@ -1,1 +1,53 @@
-<%= render 'form' %>
+<%= render 'stores/partials/form' %>
+
+
+<div class="row">
+  <div class="store-product">
+    <div class="col-md-4">
+      <p><b>Product Name</b></p>
+    </div>
+    <div class="col-md-5">
+      <p><b>Description</b></p>
+    </div>
+    <div class="col-md-3">
+      <p><b>Price</b></p>
+    </div>
+  </div>
+</div>
+<% product = Product.where(:store_id => @store.id) %>
+<% product.each do |f| %>
+  <div class="row">
+    <div class="store-product">
+
+      <div class="col-md-4">
+        <%= f.name %>
+      </div>
+      <div class="col-md-5">
+        <%= f.description %>
+      </div>
+      <div class="col-md-3">
+        <%= f.price %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<%= bootstrap_form_for(@item, local: true) do |f|%>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group">
+            <%= f.text_field :name %>
+            <%= f.text_area :description %>
+            <%= f.file_field :image %>
+            <%= f.text_field :price %>
+            <%= f.hidden_field :store_id, :value => @store.id %>
+
+            <%= f.submit %>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+<% end %>

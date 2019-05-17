@@ -1,0 +1,35 @@
+<% review = Review.where(:store_id => @store.id)%>
+<% review.each do |f| %>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="list-group">
+          <div class="list-group-item">
+            <%= f.name %>
+          </div>
+          <div class="list-group-item">
+            <p class="list-group-item-text">
+              <%= f.comment %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+<%= bootstrap_form_for(Review.new, local: true) do |f| %>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <form role="form">
+          <div class="form-group">
+            <%= f.text_field :comment %>
+            <%= f.hidden_field :store_id, :value => @store.id %>
+
+            <%= f.submit %>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,12 +1,27 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <h3 class="text-center show-header">
-        <%= @store.name %>
-      </h3>
-      <p>
-        <%= link_to "edit", edit_store_path(@store) %>
-      </p>
+      <div class="row">
+        <div class="show-header">
+          <h3 class="text-center">
+            <%= @store.name %>
+          </h3>
+          <h5 class="text-center">
+            <%= @store.website %>
+          </h5>
+          <div class="">
+            <p class="text-left">
+              <%= @store.address %>, <%= @store.area_code %>-<%= @store.phone_1 %>-<%= @store.phone_2 %>
+              <% if current_user.id == @store.user_id %>
+               <%= link_to "edit store", edit_store_path(@store) %>
+                <% end %>
+            </p>
+            <p class="text-right">
+              review paceholder
+            </p>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="col-md-8">
           <div class="show-desc">
@@ -14,45 +29,14 @@
           </div>
           <div class="show-items">
             <p>
-              <%= render "stores/products" %>
+              <%= render "stores/partials/products" %>
             </p>
-            <p>
-              <%= render "stores/new_product"%>
-            </p>
+            <% if current_user.id == @store.user_id %>
+              <%= link_to "edit products", add_product_path(@store) %>
+            <% end %>
           </div>
           <div class="show-reviews">
-            <% review = Review.where(:store_id => @store.id)%>
-            <% review.each do |f| %>
-            <div class="container-fluid">
-              <div class="row">
-                <h3>
-                  <%= f.name %>
-                </h3>
-              </div>
-              <div class="row">
-                <p>
-                  <%= f.comment %>
-                </p>
-              </div>
-            </div>
-              <% end %>
-            <%= simple_form_for(Review.new, html: { class: 'form-inline' }) do |f| %>
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-md-12">
-                    <form role="form">
-                      <div class="form-group">
-                        <%= f.input :comment %>
-                        <%= f.hidden_field :store_id, :value => @store.id %>
-
-                        <%= f.submit %>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            <% end %>
-
+            <%= render "stores/partials/reviews" %>
           </div>
         </div>
         <div class="col-md-4">
@@ -65,97 +49,7 @@
             </h4>
           </div>
           <div class="show-open">
-            <h5><b>Store Hours</b></h5>
-            <div class="row">
-              <div class="col-md-4">
-                <p><b>Monday</b></p>
-                <p><b>Tuesday</b></p>
-                <p><b>Wednesday</b></p>
-                <p><b>Thursday</b></p>
-                <p><b>Friday</b></p>
-                <p><b>Saturday</b></p>
-                <p><b>Sunday</b></p>
-              </div>
-              <div class="col-md-8">
-                <div class="show-hours">
-                  <% if @store.mon_closed.nil? %>
-                    <%= "Hours Unknown" %>
-                  <% else %>
-                    <% if @store.mon_closed == true %>
-                      <%= "Closed" %>
-                    <% else %>
-                      <%= @store.mon_open.strftime("%I:%M %p")%> - <%= @store.mon_end.strftime("%I:%M %p") %>
-                    <% end %>
-                  <% end %>
-                </div>
-                <div class="show-hours">
-                  <% if @store.tues_closed.nil? %>
-                    <%= "Hours Unknown" %>
-                  <% else %>
-                    <% if @store.tues_closed == true %>
-                      <%= "Closed" %>
-                    <% else %>
-                      <%= @store.tues_open.strftime("%I:%M %p")%> - <%= @store.tues_end.strftime("%I:%M %p") %>
-                    <% end %>
-                  <% end %>
-                </div>
-                <div class="show-hours">
-                  <% if @store.wed_closed.nil? %>
-                    <%= "Hours Unknown" %>
-                  <% else %>
-                    <% if @store.wed_closed == true %>
-                      <%= "Closed" %>
-                    <% else %>
-                      <%= @store.wed_open.strftime("%I:%M %p")%> - <%= @store.wed_end.strftime("%I:%M %p") %>
-                    <% end %>
-                  <% end %>
-                </div>
-                <div class="show-hours">
-                  <% if @store.wed_closed.nil? %>
-                    <%= "Hours Unknown" %>
-                  <% else %>
-                    <% if @store.thurs_closed == true %>
-                      <%= "Closed" %>
-                    <% else %>
-                      <%= @store.thurs_open.strftime("%I:%M %p")%> - <%= @store.thurs_end.strftime("%I:%M %p") %>
-                    <% end %>
-                  <% end %>
-                </div>
-                <div class="show-hours">
-                  <% if @store.wed_closed.nil? %>
-                    <%= "Hours Unknown" %>
-                  <% else %>
-                    <% if @store.fri_closed == true %>
-                      <%= "Closed" %>
-                    <% else %>
-                      <%= @store.fri_open.strftime("%I:%M %p")%> - <%= @store.fri_end.strftime("%I:%M %p") %>
-                    <% end %>
-                  <% end %>
-                </div>
-                <div class="show-hours">
-                  <% if @store.wed_closed.nil? %>
-                    <%= "Hours Unknown" %>
-                  <% else %>
-                    <% if @store.sat_closed == true %>
-                      <%= "Closed" %>
-                    <% else %>
-                      <%= @store.sat_open.strftime("%I:%M %p")%> - <%= @store.sat_end.strftime("%I:%M %p") %>
-                    <% end %>
-                  <% end %>
-                </div>
-                <div class="show-hours">
-                  <% if @store.wed_closed.nil? %>
-                    <%= "Hours Unknown" %>
-                  <% else %>
-                    <% if @store.sun_closed == true %>
-                      <%= "Closed" %>
-                    <% else %>
-                      <%= @store.sun_open.strftime("%I:%M %p")%> - <%= @store.sun_end.strftime("%I:%M %p") %>
-                    <% end %>
-                  <% end %>
-                </div>
-              </div>
-            </div>
+            <%= render "stores/partials/store_hours" %>
           </div>
           <div class="show-map">
           <h3>this is where the map view goes</h3>

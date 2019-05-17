@@ -1,12 +1,12 @@
-<%= simple_form_for(@item, html: { class: 'form-inline' }) do |f|%>
+<%= bootstrap_form_for(@item, local: true) do |f|%>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
         <form role="form">
           <div class="form-group">
-            <%= f.input :name %>
-            <%= f.input :description %>
-            <%= f.input :price %>
+            <%= f.text_field :name %>
+            <%= f.text_area :description %>
+            <%= f.text_field :price %>
 
             <%= f.submit %>
           </div>
