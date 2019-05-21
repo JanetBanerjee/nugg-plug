@@ -72,3 +72,10 @@ gem 'bootstrap_form'
 #uploads
 gem 'carrierwave'
 gem 'mini_magick'
+
+#apis
+gem 'omniauth-facebook'
+gem 'geocoder'
+gem 'gmaps4rails'
+gem 'underscore-rails'
+gem 'koala'

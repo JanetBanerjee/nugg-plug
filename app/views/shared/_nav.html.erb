@@ -15,8 +15,22 @@
             <li>
               <%= link_to "NuggPlug" %>
             </li>
+          </ul>
+          <ul class="nav navbar-nav pull-right">
             <li>
-              <%= link_to "Stores", stores_path %>
+              <%= link_to "Home", stores_path %>
+            </li>
+            <li>
+              <%= link_to "Brands" %>
+            </li>
+            <li>
+              <%= link_to "Dispensary" %>
+            </li>
+            <li>
+              <%= link_to "Delivary" %>
+            </li>
+            <li>
+              <%= link_to "Services" %>
             </li>
             <li>
               <%= link_to "New Store", new_store_path %>
@@ -24,8 +38,6 @@
             <li>
               <%= link_to "Vendors", vendor_path %>
             </li>
-          </ul>
-          <ul class="nav navbar-nav pull-right">
             <% if user_signed_in? %>
               <% if current_user.user_type == 'admin' %>
                 <li>

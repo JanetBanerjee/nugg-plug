@@ -2,14 +2,21 @@
   <div class="row">
     <div class="col-md-12">
       <div class="index-heading">
-        <h3 class="text-center">
+        <h1 class="text-center">
           World’s Premier Cannabis Marketplace
-        </h3>
-        <p class="text-center">Whether you are a vendor, delivery service, smoke shop, grower or anybody else in the booming Cannabis industry, NuggPlug gets millions of eyes on your brand.</p>
+        </h1>
+        <p class="text-center">NuggPlug is the Safest, most convienient 420-platform that offers our users access top hundreds of the top Cannabis brands in the world</p>
+        <p class="text-center"> We only list 100% trusted, verified businesses in the worldwide Cannabis industry to ensure that all of our members recieve nothing but the highest quality</p>
+        <h4 class="text-center">This is the searchbar paceholder</h4>
       </div>
-      <h4>
-        Featured stores
-      </h4>
+      <div class="type-header">
+        <h2 class="text-center">
+          Featured Brands
+        </h2>
+        <p class="text-center">
+          Check out our latest Cannabis brands and top choices from our 420 experts
+        </p>
+      </div>
         <div class="flexslider">
         <ul class="slides">
           <% @store.each do |p| %>
@@ -25,12 +32,14 @@
           <% end %>
         </ul>
       </div>
-      <h3 class="text-center index-vendor">
-        Advertise your business on NuggPlug!
-      </h3>
-      <h4>
-        Favorited Stores
-      </h4>
+        <h3 class="text-center index-vendor">
+          Advertise your business on NuggPlug!
+        </h3>
+      <div class="type-header">
+        <h2 class="text-center">
+          Dispensaries
+        </h2>
+      </div>
       <div class="flexslider">
         <ul class="slides">
           <% @store.each do |p| %>
@@ -46,9 +55,11 @@
           <% end %>
         </ul>
       </div>
-      <h4>
-        Recently visited
-      </h4>
+      <div class="type-header">
+        <h2 class="text-center">
+          Delivery Services
+        </h2>
+      </div>
       <div class="flexslider">
         <ul class="slides">
           <% @store.each do |p| %>
@@ -63,6 +74,11 @@
             </li>
           <% end %>
         </ul>
+      </div>
+      <div class="questions">
+        <h2>
+          Do you have questions?  Get in touch.
+        </h2>
       </div>
     </div>
   </div>

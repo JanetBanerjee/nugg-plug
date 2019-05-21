@@ -41,6 +41,32 @@
   }
 }
 
+// store.form
+
+.new-time {
+  margin-bottom: 15px;
+  margin-left: 30px;
+}
+
+.new-closed {
+  margin-bottom: 50px;
+}
+
+.new-form {
+  margin-bottom: 15px;
+}
+
+.new-store-btn {
+  algin-items: center;
+}
+
+.new-heading {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  background-color: #046937;
+  margin-bottom: 50px;
+}
+
 // store.new
 .form-hours {
   margin-right: 30px;
@@ -48,23 +74,50 @@
 
 // store.show
 .show-header {
-  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 150px;
   height: 100px;
-  border: solid;
+  background-color: #046937;
+}
+
+.header-flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+.space-around {
+  justify-content: space-around;
 }
 
 .show-desc {
-  height: 200px;
-  border: solid;
+  background-color: white;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.show-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .show-items {
-  height: 200px;
-  border: solid;
+  background-color: white;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.show-items-form {
+  padding-left: 10px;
 }
 
 .show-reviews {
-  border: solid;
+  padding-top: 20px;
+  background-color: white;
+  padding-left: 10px;
 }
 
 .store-review {
@@ -72,15 +125,16 @@
 }
 
 .show-map {
-  border: solid;
+  background-color: white;
 }
 
 .show-open {
-  border: solid;
+  background-color: white;
+  margin-bottom: 10px;
 }
 
 .show-address {
-  border: solid;
+  background-color: white;
   text-align: center;
 }
 
@@ -115,23 +169,28 @@
   border: solid;
   padding-top: 150px;
   padding-bottom: 150px;
-  background-color: forestgreen;
+  background-color: #046937;
 }
 
 .index-vendor {
   border: solid;
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: forestgreen;
+  background-color: #046937;
 }
 
 .questions {
   padding-top: 30px;
   padding-bottom: 20px;
-  background-color: forestgreen;
+  background-color: #046937;
 }
 
 //store.vendor
+
+.vendor-container {
+  display: flex;
+  flex-direction: column;
+}
 
 .vendor-pitch {
   border: solid;

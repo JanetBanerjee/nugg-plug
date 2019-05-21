@@ -23,9 +23,9 @@ class StoresController < ApplicationController
 
   def create
     @store = Store.new(params.required(:store).permit(
-                                                  :name,
+                                                  :name, :website,
                                                   :address, :city, :state, :zip, :country,
-                                                  :area_code, :phone_1, :phone_2,
+                                                  :phone_1,
                                                   :description,
                                                   :image,
                                                   :mon_open, :mon_end, :mon_closed,
@@ -36,8 +36,12 @@ class StoresController < ApplicationController
                                                   :sat_open, :sat_end, :sat_closed,
                                                   :sun_open, :sun_end, :sun_closed))
 
-    @store.name = current_user.name
     @store.user_id = current_user.id
+
+    @coord = [@store.address, @store.city, @store.state, @store.zip, @store.country].compact.join(', ')
+    results = Geocoder.search(@coord)
+    @store.latitude = results.first.latitude
+    @store.longitude = results.first.longitude
 
     if @store.save!
       redirect_to store_path(@store)
@@ -53,7 +57,7 @@ class StoresController < ApplicationController
 
   def update
     if @store.update(params.required(:store).permit(
-        :name,
+        :name, :website,
         :address, :city, :state, :zip, :country,
         :area_code, :phone_1, :phone_2,
         :description,

@@ -1,45 +1,69 @@
-<div class="container-fluid">
+<% require 'koala' %>
+
+<% @page_graph = Koala::Facebook::API.new("107941953780826") %>
+
+<div class="container-fluid show-container">
   <div class="row">
     <div class="col-md-12">
-      <div class="row">
-        <div class="show-header">
-          <h3 class="text-center">
-            <%= @store.name %>
-          </h3>
-          <h5 class="text-center">
+      <ul class="flex-container">
+        <div class="flex-item">
+          <div class="show-header">
+            <h2 class="text-center">
+              <%= @store.name %>
+            </h2>
+            <h5 class="text-center">
             <%= @store.website %>
           </h5>
-          <div class="">
-            <p class="text-left">
-              <%= @store.address %>, <%= @store.area_code %>-<%= @store.phone_1 %>-<%= @store.phone_2 %>
-              <% if current_user.id == @store.user_id %>
-               <%= link_to "edit store", edit_store_path(@store) %>
+            <ul class="header-flex-container space-around">
+              <h5 class="flex-item">
+                <%= @store.address %>, <%= @store.area_code %>-<%= @store.phone_1 %>-<%= @store.phone_2 %>
+              </h5>
+              <li class="flex-item">
+                <h5 class="text-right">
+                  review paceholder
+                </h5>
+              </li>
+            </ul>
+              <p class="flex-item">
+                <% if current_user.id == @store.user_id %>
+                  <%= link_to "edit store", edit_store_path(@store) %>
                 <% end %>
-            </p>
-            <p class="text-right">
-              review paceholder
-            </p>
+              </p>
+            </div>
+          </div>
+        </ul>
+      </ul>
+    </div>
+  </div>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <ul class="flex-container column">
+        <div class="flex-item">
+          <div class="show-desc">
+            <%= @store.description %>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8">
-          <div class="show-desc">
-          <%= @store.description %>
-          </div>
-          <div class="show-items">
-            <p>
-              <%= render "stores/partials/products" %>
-            </p>
+        <div class="flex-item show-items">
+          <%= render "stores/partials/products" %>
+          <div class="show-items-form">
             <% if current_user.id == @store.user_id %>
-              <%= link_to "edit products", add_product_path(@store) %>
+              <%= render "stores/partials/new_product" %>
             <% end %>
           </div>
+        </div>
+        <div class="flex-item">
           <div class="show-reviews">
             <%= render "stores/partials/reviews" %>
           </div>
         </div>
-        <div class="col-md-4">
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <ul class="flex-container column">
+        <div class="flex-item">
           <div class="show-address">
             <h4>
               <%= @store.address%>
@@ -48,17 +72,53 @@
               <%= @store.city %> <%= @store.state %>, <%= @store.zip %>
             </h4>
           </div>
+        </div>
+        <div class="flex-item">
           <div class="show-open">
             <%= render "stores/partials/store_hours" %>
           </div>
-          <div class="show-map">
-          <h3>this is where the map view goes</h3>
-          <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
         </div>
-      </div>
-      </div>
+        <div class="flex-item">
+          <div class="show-reviews">
+            <div class="show-map">
+              <% @coord = [@store.address, @store.city, @store.state, @store.zip, @store.country].compact.join(', ')%>
+              <% results = Geocoder.search(@coord) %>
+              <% @lat = results.first.latitude %>
+              <% @lng = results.first.longitude %>
+
+              <div style='width: 400px;'>
+                <div id="map" style='width: 320px; height: 320px;'></div>
+              </div>
+
+              <script type="text/javascript">
+
+                  handler = Gmaps.build('Google');
+
+                  var lat = '<%= @lat %>'
+                  var lng = '<%= @lng %>'
+
+                  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+                      markers = handler.addMarkers([
+                          {
+                              "lat": lat,
+                              "lng": lng,
+                              "picture": {
+                                  "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
+                                  "width":  32,
+                                  "height": 32
+                              },
+                              "infowindow": "hello!"
+                          }
+                      ]);
+                      handler.bounds.extendWith(markers);
+                      handler.fitMapToBounds();
+                  });
+              </script>
+
+            </div>
+          </div>
+        </div>
+      </ul>
     </div>
   </div>
 </div>
-</div>
-<p>

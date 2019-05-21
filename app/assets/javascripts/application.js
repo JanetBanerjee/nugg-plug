@@ -10,6 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require underscore
+//= require gmaps/google
 //= require jquery3
 //= require bootstrap-sprockets
 //= require rails-ujs
@@ -23,8 +25,8 @@ $(document).on("turbolinks:load", function() {
     $('.flexslider').flexslider({
         animation: "slide",
         animationLoop: false,
-        itemWidth: 210,
-        itemMargin: 5
+        itemWidth: 290,
+        itemMargin: 4
     });
 });
 

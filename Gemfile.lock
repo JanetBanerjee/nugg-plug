@@ -112,10 +112,15 @@ GEM
     duktape (2.0.1.0)
     erubi (1.8.0)
     execjs (2.7.0)
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
     ffi (1.10.0-x64-mingw32)
     flex-slider-rails (2.7.0)
+    geocoder (1.5.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    gmaps4rails (2.1.2)
+    hashie (3.6.0)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
@@ -126,6 +131,8 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    json (2.2.0)
+    jwt (2.1.0)
     kaminari (1.1.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.1.1)
@@ -138,6 +145,10 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
+    koala (3.0.0)
+      addressable
+      faraday
+      json (>= 1.8)
     loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -158,9 +169,25 @@ GEM
       railties (>= 3.1)
     msgpack (1.2.10-x64-mingw32)
     multi_json (1.13.1)
+    multi_xml (0.6.0)
+    multipart-post (2.1.1)
     nio4r (2.3.1)
     nokogiri (1.10.3-x64-mingw32)
       mini_portile2 (~> 2.4.0)
+    oauth2 (1.4.1)
+      faraday (>= 0.8, < 0.16.0)
+      jwt (>= 1.0, < 3.0)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (>= 1.2, < 3)
+    omniauth (1.9.0)
+      hashie (>= 3.4.6, < 3.7.0)
+      rack (>= 1.6.2, < 3)
+    omniauth-facebook (5.0.0)
+      omniauth-oauth2 (~> 1.2)
+    omniauth-oauth2 (1.6.0)
+      oauth2 (~> 1.1)
+      omniauth (~> 1.9)
     orm_adapter (0.5.0)
     owlcarousel-rails (2.2.3.5)
     pg (1.1.4-x64-mingw32)
@@ -242,6 +269,7 @@ GEM
       tzinfo (>= 1.0.0)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
+    underscore-rails (1.8.3)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (3.7.0)
@@ -272,9 +300,13 @@ DEPENDENCIES
   devise
   duktape
   flex-slider-rails
+  geocoder
+  gmaps4rails
   jbuilder (~> 2.5)
   jquery-rails
+  koala
   mini_magick
+  omniauth-facebook
   owlcarousel-rails
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
@@ -285,6 +317,7 @@ DEPENDENCIES
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
+  underscore-rails
   web-console (>= 3.3.0)
 
 RUBY VERSION
