@@ -15,12 +15,16 @@
             <h2>
               How it Works
             </h2>
+            <hr class="vendor-hr">
             <p>
               Our 3-step process makes it incredibly easy to get more eyes on your 420 brand
             </p>
           </div>
-          <div class="header-flex-container space-around">
-            <div class="flex-item text-center">
+          <div class="header-flex-container space-around vendor-body">
+            <div class="col-sm-4 text-center vendor-card">
+              <div class="vendor-icon">
+                <%= octicon "zap", :height => 55,  :class => "right left", :"aria-label" => "hi" %>
+              </div>
               <h4>
                 Sign Up
               </h4>
@@ -28,7 +32,10 @@
                 Register for your NuggPlug account
               </p>
             </div>
-            <div class="flex-item text-center">
+            <div class="col-sm-4 text-center vendor-card">
+              <div class="vendor-icon">
+                <%= octicon "location", :height => 55,  :class => "right left", :"aria-label" => "hi" %>
+              </div>
               <h4>
                 Make a Listing
               </h4>
@@ -36,7 +43,10 @@
                 Our easy-to-use listing service takes just minutes
               </p>
             </div>
-            <div class="flex-item text-center">
+            <div class="col-sm-4 text-center vendor-card">
+              <div class="vendor-icon">
+                <%= octicon "smiley", :height => 55,  :class => "right left", :"aria-label" => "hi" %>
+              </div>
               <h4>
                 Generate Clients
               </h4>
@@ -45,41 +55,29 @@
               </p>
             </div>
           </div>
-          <div class="vendor-body text-center">
+          <div class="vendor-body text-center ">
             <h2>
               Our Flexible Membership Packages
             </h2>
-            <p>
+            <hr class="vendor-hr">
+            <p class="vendor-membership">
               To meet the needs of all our Cannabis industry partners, we have developed three unique membership packages.
             </p>
+            <%= render "stores/partials/packages" %>
           </div>
-          <div class="header-flex-container space-around">
-            <div class="flex-item text-center">
-              <h4>
-                Starter
-              </h4>
-            </div>
-            <div class="flex-item text-center">
-              <h4>
-                Extended
-              </h4>
-            </div>
-            <div class="flex-item text-center">
-              <h4>
-                Professional
-              </h4>
-            </div>
-          </div>
+
           <div class="vendor-body text-center">
             <h2>
               Testimonials
             </h2>
+            <hr class="vendor-hr">
+            <div class="header-flex-container space-around">
+              <h3>
+                Carousel Placeholder
+              </h3>
+            </div>
           </div>
-          <div class="header-flex-container space-around">
-            <h3>
-              Carousel Placeholder
-            </h3>
-          </div>
+
         </div>
       </ul>
     </div>

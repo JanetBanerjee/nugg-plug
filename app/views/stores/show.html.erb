@@ -1,6 +1,4 @@
-<% require 'koala' %>
 
-<% @page_graph = Koala::Facebook::API.new("107941953780826") %>
 
 <div class="container-fluid show-container">
   <div class="row">
@@ -16,7 +14,7 @@
           </h5>
             <ul class="header-flex-container space-around">
               <h5 class="flex-item">
-                <%= @store.address %>, <%= @store.area_code %>-<%= @store.phone_1 %>-<%= @store.phone_2 %>
+                <%= octicon "device-mobile", :height => 15,  :class => "right left", :"aria-label" => "hi" %> <%= @store.area_code %>-<%= @store.phone_1 %>-<%= @store.phone_2 %>
               </h5>
               <li class="flex-item">
                 <h5 class="text-right">

@@ -68,6 +68,8 @@ gem 'jquery-rails'
 gem 'owlcarousel-rails'
 gem 'flex-slider-rails'
 gem 'bootstrap_form'
+gem 'octicons'
+gem 'octicons_helper'
 
 #uploads
 gem 'carrierwave'

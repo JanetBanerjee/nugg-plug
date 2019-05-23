@@ -17,6 +17,12 @@
   background-color: black;
 }
 
+.navbar-icons {
+  margin-top: 3px;
+  background-color: white;
+  border-radius: 3px;
+}
+
 .footer {
   background-color: lightgrey;
 }
@@ -199,11 +205,73 @@
 .vendor-adv {
   border: solid;
 }
- .vendor-heading {
-   border: solid;
-   margin-top: 15px;
-   margin-bottom: 15px;
+
+.vendor-header {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  background-color: #046937;
+  border-radius: 5px;
  }
+
+.vendor-body {
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.vendor-membership {
+  padding-bottom: 50px;
+}
+
+.vendor-card {
+  border: solid;
+  border-color: #BBBBBB;
+  border-radius: 8px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.vendor-icon {
+  padding-bottom: 10px;
+}
+
+.vendor-hr {
+  width: 10%;
+  border-width: 2px;
+  margin-left: 45%;
+  border-color: #046937;
+}
+ //store.vendor.packages
+
+.vendor-table {
+  text-align: center;
+}
+
+.table-heading {
+  background-color: #046937;
+  font-size: x-large;
+  border-radius: 5px;
+}
+
+.ta {
+  background-color: white;
+}
+
+.tb {
+  background-color: #DADADA;
+}
+
+.t-price {
+  background-color: white;
+  font-size: x-large;
+}
+
+.t-month {
+  background-color: white;
+  font-size: 16px;
+  color: #BBBBBB;
+}
+
 
  //store.support
 
