@@ -4,27 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/db/migrate/20190430183405_create_stores.rb" line="11" />
     <bookmark url="file://$PROJECT_DIR$/app/views/stores/partials/_form.html.erb" line="105" />
     <bookmark url="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" line="252" />
+    <bookmark url="mock:///Dummy.txt" line="0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c2add2f-a219-4d53-931f-c52f9aad614f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/stores/_search.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/stores/brand.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/stores/delivery.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/stores/dispensary.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/stores/search.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/stores/service.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/nugg-plug.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/nugg-plug.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/stores_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/stores_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/store.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/store.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/_nav.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_nav.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/stores/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/stores/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/stores/partials/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/stores/partials/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/stores/partials/_packages.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/stores/partials/_packages.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
-    </list>
+    <list default="true" id="3c2add2f-a219-4d53-931f-c52f9aad614f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +154,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/stores/partials/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+              <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -544,7 +527,7 @@
       <workItem from="1558109133598" duration="14208000" />
       <workItem from="1558370814981" duration="27682000" />
       <workItem from="1558546579401" duration="16287000" />
-      <workItem from="1558717330549" duration="10187000" />
+      <workItem from="1558717330549" duration="10457000" />
     </task>
     <task id="LOCAL-00001" summary="5/14 commit, before adding messanger">
       <created>1557855526736</created>
@@ -602,11 +585,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558727463728</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="5/24 Added store type to form">
+      <created>1558727998221</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1558727998221</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156841000" />
+    <option name="totallyTimeSpent" value="157111000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -619,9 +609,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1809291" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1809291" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -634,7 +623,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32922733" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32922733" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49938875" visible="true" weight="0.32922733" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49938875" visible="true" weight="0.32922733" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50061125" side_tool="true" weight="0.30235162" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32922733" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3286119" />
@@ -679,7 +668,8 @@
     <MESSAGE value="5/21 Added google maps and started adding facebook.  Lots of formatting, including flexboxes. part 2" />
     <MESSAGE value="5/23 added icons and cleaned up formatting" />
     <MESSAGE value="5/14 added search function.  Added sub categories." />
-    <option name="LAST_COMMIT_MESSAGE" value="5/14 added search function.  Added sub categories." />
+    <MESSAGE value="5/24 Added store type to form" />
+    <option name="LAST_COMMIT_MESSAGE" value="5/24 Added store type to form" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/nugg_plug@Development__nugg_plug.rcov" NAME="Development: nugg-plug Coverage Results" MODIFIED="1558724559576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="nugg-plug" />
@@ -998,7 +988,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/stores/partials/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
         </state>
       </provider>
     </entry>
