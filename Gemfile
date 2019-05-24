@@ -61,6 +61,8 @@ gem 'devise'
 gem 'simple_form'
 gem 'administrate'
 gem 'bourbon'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 
 #formatting
 gem 'bootstrap-sass'
@@ -70,6 +72,7 @@ gem 'flex-slider-rails'
 gem 'bootstrap_form'
 gem 'octicons'
 gem 'octicons_helper'
+gem 'wice_grid'
 
 #uploads
 gem 'carrierwave'
