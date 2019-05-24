@@ -2,12 +2,12 @@
   <div class="container-fluid">
   <div class="row">
     <div class="new-heading">
-      <div class="col-md-6">
+      <div class="col-md-4">
         <h3 class="text-center">
           Store Information
         </h3>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <h3 class="text-center">
           Store Hours
         </h3>
@@ -23,6 +23,11 @@
         <div class="col-md-4">
           <div class="new-form">
             <%= f.text_field :website %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="new-form">
+            <%= f.select :store_type, [["brand"], ["dispensary"], ["delivery"], ["service"]] %>
           </div>
         </div>
       </div>

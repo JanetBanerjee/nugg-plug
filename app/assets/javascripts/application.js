@@ -13,6 +13,7 @@
 //= require underscore
 //= require gmaps/google
 //= require jquery3
+//= require wice_grid
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require activestorage

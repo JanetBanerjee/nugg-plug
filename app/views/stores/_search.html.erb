@@ -1,0 +1,24 @@
+<%= form_tag stores_path, :method => 'get' do %>
+  <div class="text-center">
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+  </div>
+<% end %>
+
+<div class="flexslider">
+  <ul class="slides">
+    <% for p in @search %>
+      <li class="slide">
+        <%= link_to p.name, store_path(p) %>
+        <br>
+        <%= p.city %>, <%= p.state %>
+        <br>
+        <p>````</p>
+        <br>
+        <p>````</p>
+      </li>
+    <% end %>
+  </ul>
+</div>

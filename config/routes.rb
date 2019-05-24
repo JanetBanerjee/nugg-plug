@@ -20,8 +20,11 @@ Rails.application.routes.draw do
 
   get "/vendor" => "stores#vendor"
   get "/support" => "stores#support"
-  get "/add_product" => "stores#add_product"
-  get "/new_vendor" => "stores#new_vendor"
+  get "/brand" => "stores#brand"
+  get "/dispensary" => "stores#dispensary"
+  get "/delivery" => "stores#delivery"
+  get "/services" => "stores#services"
+  get '/search' => "stores#search"
 
   resources :conversations, only: [:create] do
     member do

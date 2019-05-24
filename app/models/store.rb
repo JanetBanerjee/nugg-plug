@@ -12,4 +12,12 @@ class Store < ApplicationRecord
   geocoded_by :full_address
 
   after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
+
+  def self.search(search)
+    if search
+      self.where('name LIKE ?', "%#{search}%")
+    else
+      self.all
+    end
+  end
 end
