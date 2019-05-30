@@ -1,12 +1,13 @@
-<div class="container-fluid">
-  <div class="row">
+
+<div class="container-fluid p-0">
+  <div class="row img">
     <div class="col-md-12">
       <div class="index-heading">
-        <h1 class="text-center">
+        <h1 class="text-center index-heading-text">
           World’s Premier Cannabis Marketplace
         </h1>
-        <p class="text-center">NuggPlug is the Safest, most convienient 420-platform that offers our users access top hundreds of the top Cannabis brands in the world</p>
-        <p class="text-center"> We only list 100% trusted, verified businesses in the worldwide Cannabis industry to ensure that all of our members recieve nothing but the highest quality</p>
+        <p class="text-center index-heading-text">NuggPlug is the Safest, most convienient 420-platform that offers our users access top hundreds of the top Cannabis brands in the world</p>
+        <p class="text-center index-heading-text"> We only list 100% trusted, verified businesses in the worldwide Cannabis industry to ensure that all of our members recieve nothing but the highest quality</p>
       </div>
       <div class="type-header">
       <%= render "stores/search" %>
@@ -35,7 +36,7 @@
         </ul>
       </div>
         <h3 class="text-center index-vendor">
-          Advertise your business on NuggPlug!
+          <%= link_to "Advertise your business on NuggPlug!", vendor_path, :class => "b2" %>
         </h3>
       <div class="type-header">
         <h2 class="text-center">
