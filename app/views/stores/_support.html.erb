@@ -1,0 +1,20 @@
+<% session[:conversations] ||= [] %>
+
+<% @users = User.where(id: 2) %>
+
+<% @conversations = Conversation.includes(:recipient, :messages).find(session[:conversations]) %>
+
+<div class="row">
+  <div class="support support-link">
+    <ul id="conversations-list">
+      <% @conversations.each do |conversation| %>
+        <%= render 'conversations/conversation', conversation: conversation, user: current_user %>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="panel-body support-link">
+    <%= link_to (octicon "comment", :height => 35), conversations_path(@users), remote: true, method: :post %>
+  </div>
+</div>
+

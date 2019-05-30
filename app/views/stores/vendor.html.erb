@@ -4,10 +4,10 @@
       <ul class="flex-container">
         <div class="flex-item">
           <div class="vendor-header">
-            <h2 class="flex-item text-center">
+            <h2 class="flex-item text-center vendor-header-text">
               Join our online community
             </h2>
-            <p class="text-center">
+            <p class="text-center vendor-header-text">
               We started NuggPlug to bring together cannabis enthusiasts from around the world through a safe, secure platform. Whether you are a patient, recreational user or 420-friendly business or grower, we want you to be a NuggPlug member!
             </p>
           </div>
@@ -56,6 +56,18 @@
             </div>
           </div>
           <div class="vendor-body text-center ">
+            <td>
+              <% if user_signed_in? %>
+                <%= link_to "Join Today!", new_store_path, :class => "b1" %>
+              <% else %>
+                <%= link_to "Join Today!", new_user_session_path, :class => "b1" %>
+              <% end %>
+            </td>
+            <h4 class="vendor-membership trial">
+              Enjoy a free, no obligation 30 day trial.
+            </h4>
+          </div>
+          <div class="vendor-body text-center ">
             <h2>
               Our Flexible Membership Packages
             </h2>
@@ -65,19 +77,6 @@
             </p>
             <%= render "stores/partials/packages" %>
           </div>
-
-          <div class="vendor-body text-center">
-            <h2>
-              Testimonials
-            </h2>
-            <hr class="vendor-hr">
-            <div class="header-flex-container space-around">
-              <h3>
-                Carousel Placeholder
-              </h3>
-            </div>
-          </div>
-
         </div>
       </ul>
     </div>

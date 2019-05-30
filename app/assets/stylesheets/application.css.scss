@@ -2,6 +2,7 @@
 @import "bootstrap";
 @import "bourbon";
 @import "wice_grid";
+@import "social-share-button";
 
 //general
 .body {
@@ -25,7 +26,12 @@
 }
 
 .footer {
-  background-color: lightgrey;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #BBBBBB;
+  color: white;
+  text-align: center;
 }
 
 .footer-fixed {
@@ -35,17 +41,46 @@
 .navbar-header {
   width: 100%;
 
-  button, .navbar-brand {
-    transition: opacity 0.15s;
-  }
-
   button {
     margin-right: 0;
   }
+}
 
-  button:hover, .navbar-brand:hover {
-    opacity: 0.8;
-  }
+.nav-image {
+  padding-bottom: 5px;
+
+}
+
+.nav-link {
+  padding-top: 10px;
+  font-weight: bold;
+  color: #F1F0F0 !important;
+}
+
+.navbar-brand, .navbar-nav > li > a {
+  text-shadow: none !important;
+  color: #fcf9f9 !important;
+}
+
+// support
+
+ul {
+  padding-left: 0px;
+  list-style: none;
+}
+
+.support-link {
+  right: 45px;
+  bottom: 70px;
+  position: fixed;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.support {
+
 }
 
 // store.form
@@ -163,6 +198,12 @@
 }
 
 // store.index
+
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .slide {
   border: solid;
 }
@@ -176,7 +217,12 @@
   border: solid;
   padding-top: 150px;
   padding-bottom: 150px;
-  background-color: #046937;
+  background-image: url("header.jpg");
+  width: 100%;
+}
+
+.index-heading-text {
+  color: white;
 }
 
 .index-vendor {
@@ -190,6 +236,16 @@
   padding-top: 30px;
   padding-bottom: 20px;
   background-color: #046937;
+}
+
+.b2 {
+  text-size: 46px;
+  text-decoration: none;
+  color: white;
+}
+
+.b2 a:link {
+  text-decoration: none;
 }
 
 //store.vendor
@@ -210,9 +266,13 @@
 .vendor-header {
   padding-top: 75px;
   padding-bottom: 75px;
-  background-color: #046937;
+  background-image: url("header.jpg");
   border-radius: 5px;
  }
+
+.vendor-header-text {
+  color: white;
+}
 
 .vendor-body {
   background-color: white;
@@ -243,6 +303,9 @@
   border-color: #046937;
 }
 
+.trial {
+  padding-top: 30px;
+}
  //store.vendor.packages
 
 .vendor-table {
@@ -283,6 +346,10 @@
   background-color: white;
   font-size: 16px;
   color: #BBBBBB;
+}
+
+.package-body {
+  padding-bottom: 50px;
 }
 
 

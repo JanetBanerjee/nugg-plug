@@ -5,12 +5,6 @@ class StoresController < ApplicationController
     @store = Store.all
 
     @search= Store.search(params[:search])
-
-    @graph = Koala::Facebook::API.new("EAAFPUZACblb0BALaKy4VI9pzaYJISp8jCa5oeFrrZA6LZBouLlu2zZByx8xf608tq3i9S0q0ckG7hpeN7hoLo8WDz1MJwAaGpuQoaxFvgaxZA66w4PjF0BWECDEZCXOky2ZAKTZAzOphghF1LEownuwIm0MTZA5ZCPyL5xL6PF9XOqtQyNY2cQSru8YGdc9fixM7Yi9J2aGycOqgk0GhuS3qdw")
-  end
-
-  def search
-
   end
 
   def support
@@ -21,8 +15,8 @@ class StoresController < ApplicationController
                          .find(session[:conversations])
   end
 
-  def add_product
-
+  def vendor
+    @tier = Payment.new
   end
 
   def dispensary
@@ -72,7 +66,6 @@ class StoresController < ApplicationController
     else
       render :new
     end
-
   end
 
   def edit
