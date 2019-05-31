@@ -30,7 +30,7 @@
               <%= link_to "Delivery", delivery_path %>
             </li>
             <li class="nav-link">
-              <%= link_to "Services", services_path %>
+              <%= link_to "Services", service_path %>
             </li>
             <% if user_signed_in? %>
               <% if current_user.user_type == 'admin' %>

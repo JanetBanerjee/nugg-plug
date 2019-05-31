@@ -27,7 +27,7 @@
         </div>
         <div class="col-md-4">
           <div class="new-form">
-            <%= f.select :store_type, [["brand"], ["dispensary"], ["delivery"], ["service"]] %>
+            <%= f.email_field :email %>
           </div>
         </div>
       </div>
@@ -63,7 +63,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="new-form">
-            <%= f.phone_field :phone_1 %>
+            <%= f.phone_field :phone_1, label: "Phone" %>
           </div>
           <br>
           <div class="new-form">
@@ -72,6 +72,14 @@
           <br>
           <div class="new-form">
             <%= f.file_field :image %>
+          </div>
+          <div class="new-form">
+            <%= f.file_field :thumb, label: "thumbnail" %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="new-form">
+            <%= f.select :store_type, [["brand"], ["dispensary"], ["delivery"], ["service"]] %>
           </div>
         </div>
       </div>

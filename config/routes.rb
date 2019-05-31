@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       resources :reviews
       resources :stores
 
-      root to: "users#index"
+      root to: "stores#index"
     end
   resources :payments
   resources :reviews
@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   get "/brand" => "stores#brand"
   get "/dispensary" => "stores#dispensary"
   get "/delivery" => "stores#delivery"
-  get "/services" => "stores#services"
+  get "/service" => "stores#service"
   get '/search' => "stores#search"
 
   resources :conversations, only: [:create] do

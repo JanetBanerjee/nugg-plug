@@ -114,12 +114,21 @@ ul {
   margin-right: 30px;
 }
 
+.phone {
+  width: 33%;
+}
+
 // store.show
 .show-header {
-  padding-top: 50px;
-  padding-bottom: 150px;
+  padding-top: 150px;
+  padding-bottom: 250px;
   height: 100px;
   background-color: #046937;
+  color: white;
+}
+
+.store-header-text {
+  padding-top: 30px;
 }
 
 .header-flex-container {

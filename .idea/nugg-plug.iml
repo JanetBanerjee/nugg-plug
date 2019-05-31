@@ -61,13 +61,18 @@
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.4, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="datetime_picker_rails (v0.0.7, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="devise (v4.6.2, ruby-2.5.5-p157) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dotenv (v2.7.2, ruby-2.5.5-p157) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dotenv-rails (v2.7.2, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="duktape (v2.0.1.0, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.8.0, ruby-2.5.5-p157) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="excon (v0.64.0, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.7.0, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faraday (v0.15.4, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.10.0, ruby-2.5.5-p157) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="figaro (v1.1.1, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="flex-slider-rails (v2.7.0, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="geocoder (v1.5.1, ruby-2.5.5-p157) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="gibbon (v3.2.0, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.4.2, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="gmaps4rails (v2.1.2, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hashie (v3.6.0, ruby-2.5.5-p157) [gem]" level="application" />
@@ -84,6 +89,7 @@
     <orderEntry type="library" scope="PROVIDED" name="koala (v3.0.0, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="loofah (v2.2.3, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.7.1, ruby-2.5.5-p157) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mailchimp-api (v2.0.6, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="marcel (v0.3.3, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="method_source (v0.9.2, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v3.2.2, ruby-2.5.5-p157) [gem]" level="application" />
@@ -135,6 +141,7 @@
     <orderEntry type="library" scope="PROVIDED" name="social-share-button (v1.2.0, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v3.7.2, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v3.2.1, ruby-2.5.5-p157) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sucker_punch (v2.1.2, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sunspot (v2.3.0, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sunspot_rails (v2.3.0, ruby-2.5.5-p157) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sunspot_solr (v2.3.0, ruby-2.5.5-p157) [gem]" level="application" />

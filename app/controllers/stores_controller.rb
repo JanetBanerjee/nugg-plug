@@ -4,7 +4,9 @@ class StoresController < ApplicationController
   def index
     @store = Store.all
 
-    @search= Store.search(params[:search])
+    @rating = Review.all
+
+    @search= Store.search(params[:search]) if params[:search].present?
   end
 
   def support
@@ -41,11 +43,11 @@ class StoresController < ApplicationController
 
   def create
     @store = Store.new(params.required(:store).permit(
-                                                  :name, :website,
+                                                  :name, :website, :email,
                                                   :address, :city, :state, :zip, :country,
                                                   :phone_1,
                                                   :description,
-                                                  :image,
+                                                  :image, :thumb,
                                                   :mon_open, :mon_end, :mon_closed,
                                                   :tues_open, :tues_end, :tues_closed,
                                                   :wed_open, :wed_end, :wed_closed,
@@ -61,6 +63,9 @@ class StoresController < ApplicationController
     @store.latitude = results.first.latitude
     @store.longitude = results.first.longitude
 
+    gibbon = Gibbon::Request.new(api_key: "486d3d12cc746c2c9cc5200846859494-us20")
+    gibbon.lists("fb528460e2").members.create(body: {email_address: @store.email, status: "subscribed", merge_fields: {FNAME: @store.name}})
+
     if @store.save!
       redirect_to store_path(@store)
     else
@@ -74,11 +79,11 @@ class StoresController < ApplicationController
 
   def update
     if @store.update(params.required(:store).permit(
-        :name, :website,
+        :name, :website, :email,
         :address, :city, :state, :zip, :country,
         :area_code, :phone_1, :phone_2,
         :description,
-        :image,
+        :image, :thumb,
         :mon_open, :mon_end, :mon_closed,
         :tues_open, :tues_end, :tues_closed,
         :wed_open, :wed_end, :wed_closed,

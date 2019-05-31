@@ -3,10 +3,12 @@
     <% group.each do |p| %>
       <div class='col-md-3'>
         <p>
-          thumbnail placeholder
+          <% if p.thumb.url %>
+            <%= image_tag p.thumb.url %>
+          <% end %>
         </p>
         <h3 class="text-center">
-          <%= p.name %>
+          <%= link_to p.name, stores_path(p) %>
         </h3>
         <p class="text-center">
           <%= p.city %>, <%= p.state %>
@@ -14,7 +16,6 @@
         <p class="text-center">
           <%= p.description %>
         </p>
-
       </div>
     <% end %>
   </div>

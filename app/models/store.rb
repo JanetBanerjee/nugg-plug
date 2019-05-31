@@ -4,6 +4,7 @@ class Store < ApplicationRecord
   has_many :products
 
   mount_uploader :image, ImageUploader
+  mount_uploader :thumb, ThumbUploader
 
   def full_address
     [:address, :city, :state, :country].compact.join(', ')
@@ -20,4 +21,5 @@ class Store < ApplicationRecord
       self.all
     end
   end
+
 end

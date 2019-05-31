@@ -7,6 +7,9 @@
           <div class="list-group-item">
             <%= f.name %>
           </div>
+          <% f.rating.to_i.times do  %>
+            <%= octicon "star" %>
+          <% end %>
           <div class="list-group-item">
             <p class="list-group-item-text">
               <%= f.comment %>
@@ -25,6 +28,7 @@
           <div class="form-group">
             <%= f.text_field :comment %>
             <%= f.hidden_field :store_id, :value => @store.id %>
+            <%= f.text_field :rating %>
 
             <%= f.submit %>
           </div>

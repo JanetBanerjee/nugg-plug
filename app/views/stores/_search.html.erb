@@ -7,18 +7,20 @@
   </div>
 <% end %>
 
-<div class="flexslider">
-  <ul class="slides">
-    <% for p in @search %>
-      <li class="slide">
-        <%= link_to p.name, store_path(p) %>
-        <br>
-        <%= p.city %>, <%= p.state %>
-        <br>
-        <p>````</p>
-        <br>
-        <p>````</p>
-      </li>
-    <% end %>
-  </ul>
-</div>
+<% if @search.present? %>
+  <div class="flexslider">
+    <ul class="slides">
+      <% for p in @search %>
+        <li class="slide">
+          <%= link_to p.name, store_path(p) %>
+          <br>
+          <%= p.city %>, <%= p.state %>
+          <br>
+          <p>````</p>
+          <br>
+          <p>````</p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
