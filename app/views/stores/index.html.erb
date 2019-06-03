@@ -13,72 +13,93 @@
       <%= render "stores/search" %>
       </div>
       <div class="type-header">
-        <h2 class="text-center">
+        <hr class="vendor-hr">
+        <h1 class="text-center">
           Featured Brands
-        </h2>
+        </h1>
         <p class="text-center">
           Check out our latest Cannabis brands and top choices from our 420 experts
         </p>
+        <hr class="vendor-hr">
       </div>
         <div class="flexslider">
         <ul class="slides">
           <% @store.each do |p| %>
-            <li class="slide">
-              <%= link_to p.name, store_path(p) %>
+            <li class="slide text-center">
+              <% if p.thumb.url %>
+                <%= image_tag p.thumb.url %>
+              <% end %>
+              <h3>
+                <%= link_to p.name, store_path(p) %>
+              </h3>
               <br>
-              <%= p.city %>, <%= p.state %>
+              <h4>
+                <%= p.store_type %>
+              </h4>
               <br>
-              <p>````</p>
-              <br>
-              <p>````</p>
+              <h4>
+                <p><%= p.city %>, <%= p.state %></p>
+              </h4>
             </li>
           <% end %>
         </ul>
       </div>
-        <h3 class="text-center index-vendor">
-          <%= link_to "Advertise your business on NuggPlug!", vendor_path, :class => "b2" %>
-        </h3>
+      <h3 class="text-center vendor-header">
+        <%= link_to "Advertise your business on NuggPlug!", vendor_path, :class => "b2" %>
+      </h3>
       <div class="type-header">
-        <h2 class="text-center">
+        <hr class="vendor-hr">
+        <h1 class="text-center">
           Dispensaries
-        </h2>
+        </h1>
+        <hr class="vendor-hr">
       </div>
       <div class="flexslider">
-        <ul class="slides">
-          <% @store.each do |p| %>
+        <ul class="slides text-center">
+          <% disp = @store.where(:store_type => "dispensary") %>
+          <% disp.each do |p| %>
             <li class="slide">
-              <%= p.name %>
+              <% if p.thumb.url %>
+                <%= image_tag p.thumb.url %>
+              <% end %>
+              <h3>
+                <%= link_to p.name, store_path(p) %>
+              </h3>
               <br>
-              <%= p.city %>, <%= p.state %>
-              <br>
-              <p>````</p>
-              <br>
-              <p>````</p>
+              <h4>
+                <p><%= p.city %>, <%= p.state %></p>
+              </h4>
             </li>
           <% end %>
         </ul>
       </div>
       <div class="type-header">
-        <h2 class="text-center">
+        <hr class="vendor-hr">
+        <h1 class="text-center">
           Delivery Services
-        </h2>
+        </h1>
+        <hr class="vendor-hr">
       </div>
       <div class="flexslider">
-        <ul class="slides">
-          <% @store.each do |p| %>
+        <ul class="slides text-center">
+          <% del = @store.where(:store_type => "delivery") %>
+          <% del.each do |p| %>
             <li class="slide">
-              <%= p.name %>
+              <% if p.thumb.url %>
+                <%= image_tag p.thumb.url %>
+              <% end %>
+              <h3>
+                <%= link_to p.name, store_path(p) %>
+              </h3>
               <br>
-              <%= p.city %>, <%= p.state %>
-              <br>
-              <p>````</p>
-              <br>
-              <p>````</p>
+              <h4>
+                <p><%= p.city %>, <%= p.state %></p>
+              </h4>
             </li>
           <% end %>
         </ul>
       </div>
-      <div class="questions">
+      <div class="questions text-center">
         <h2>
           Do you have questions?  Get in touch.
         </h2>

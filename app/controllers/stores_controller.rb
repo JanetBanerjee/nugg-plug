@@ -2,7 +2,7 @@ class StoresController < ApplicationController
   before_action :store_params, only: [:edit, :update]
 
   def index
-    @store = Store.all
+    @store = Store.where(approval: "true")
 
     @rating = Review.all
 
@@ -67,7 +67,7 @@ class StoresController < ApplicationController
     gibbon.lists("fb528460e2").members.create(body: {email_address: @store.email, status: "subscribed", merge_fields: {FNAME: @store.name}})
 
     if @store.save!
-      redirect_to store_path(@store)
+      redirect_to store_created_path
     else
       render :new
     end

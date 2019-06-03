@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resources :stores
   devise_for :users
 
-  root to: "static#homepage"
+  root to: "stores#index"
 
   get "/vendor" => "stores#vendor"
   get "/support" => "stores#support"
@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get "/delivery" => "stores#delivery"
   get "/service" => "stores#service"
   get '/search' => "stores#search"
+  get '/store_created' => "stores#store_created"
 
   resources :conversations, only: [:create] do
     member do
