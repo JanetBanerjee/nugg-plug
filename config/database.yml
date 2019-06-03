@@ -81,9 +81,9 @@ test:
 production:
   <<: *default
   encoding: utf8
-  database: ddf5ecpb6grfqb
+  database: <%= ENV["PROD_DATABASE"] %>
   username: jjaxpssdltdxkg
-  password: 33fc5e4497ed17c770992eabc7d6ed1ec142fdf7399c2b61c1e829d8eae825c5
-  host: ec2-54-83-201-84.compute-1.amazonaws.com
+  password: <%= ENV["PROD_PASSWORD"] %>
+  host: <%= ENV["PROD_HOST"] %>
   port: 5432
 

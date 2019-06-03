@@ -63,8 +63,8 @@ class StoresController < ApplicationController
     @store.latitude = results.first.latitude
     @store.longitude = results.first.longitude
 
-    gibbon = Gibbon::Request.new(api_key: "486d3d12cc746c2c9cc5200846859494-us20")
-    gibbon.lists("fb528460e2").members.create(body: {email_address: @store.email, status: "subscribed", merge_fields: {FNAME: @store.name}})
+    gibbon = Gibbon::Request.new(api_key: ENV["MAILCHIMP_API_KEY"])
+    gibbon.lists(ENV["MAILCHIMP_LIST_ID"]).members.create(body: {email_address: @store.email, status: "subscribed", merge_fields: {FNAME: @store.name}})
 
     if @store.save!
       redirect_to store_created_path
