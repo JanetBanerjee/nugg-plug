@@ -81,9 +81,9 @@ test:
 production:
   <<: *default
   encoding: utf8
-  database: d74mke5ds7td87
-  username: qopgykagernxcl
-  password: bb96ec4fa2475340177d6b21300cbc767cd8f88f3c698171102e94b2af310ba3
-  host: ec2-75-101-147-226.compute-1.amazonaws.com
+  database: ddf5ecpb6grfqb
+  username: jjaxpssdltdxkg
+  password: 33fc5e4497ed17c770992eabc7d6ed1ec142fdf7399c2b61c1e829d8eae825c5
+  host: ec2-54-83-201-84.compute-1.amazonaws.com
   port: 5432
 
